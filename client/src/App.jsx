@@ -1,17 +1,11 @@
-import { useState } from "react";
+import SearchBar from "./components/SearchBar";
+import "./styles.css";
 
 function App() {
-  const [query, setQuery] = useState("");
-
   return (
-    <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
-      <input
-        type="text"
-        placeholder="Search..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        style={{ padding: "10px", width: "300px", borderRadius: "5px", border: "1px solid #ccc" }}
-      />
+    <div className="app-container">
+      <h1 className="title">Autosuggest Search Bar</h1>
+      <SearchBar />
     </div>
   );
 }
